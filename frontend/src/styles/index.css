@@ -1,0 +1,138 @@
+:root {
+  --primary: #f3ba2f; /* Binance Yellow */
+  --primary-dark: #dca01d;
+  --bg: #0b0e11;
+  --bg-card: #1e2329;
+  --text: #ffffff;
+  --text-dim: #848e9c;
+  --success: #0ecb81;
+  --danger: #f6465d;
+  --border: #333941;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: var(--bg-card);
+  padding: 2rem;
+  border-right: 1px solid var(--border);
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  background: radial-gradient(circle at top right, #1e2329 0%, #0b0e11 100%);
+}
+
+header {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  background: linear-gradient(90deg, var(--primary), #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: rgba(30, 35, 41, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: 1.2rem;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+}
+
+.card-title {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.table-container {
+  background: var(--bg-card);
+  border-radius: 1.2rem;
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--text-dim);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.status-paid { color: var(--success); }
+.status-pending { color: var(--primary); }
+
+button {
+  background: var(--primary);
+  color: #000;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: var(--primary-dark);
+}
+
+button.secondary {
+  background: var(--border);
+  color: #fff;
+}
