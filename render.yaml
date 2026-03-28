@@ -11,7 +11,7 @@ services:
       - key: ADMIN_SECRET_KEY
         generateValue: true
       - key: SUPABASE_URL
-        fromValue: https://wedrdhnoioakdrzqsofw.supabase.co
+        value: https://wedrdhnoioakdrzqsofw.supabase.co
       - key: SUPABASE_KEY
         sync: false
       - key: TATUM_API_KEY
@@ -24,5 +24,3 @@ services:
         value: "0x55d398326f99059fF775485246999027B3197955"
       - key: MAIN_HOT_WALLET_ADDRESS
         sync: false
-      - key: APP_URL
-        fromContext: instance_url
